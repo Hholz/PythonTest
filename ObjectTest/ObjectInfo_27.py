@@ -16,6 +16,7 @@ def fn():
     pass
 
 
+print(isinstance(fn, types.FunctionType))
 print(type(fn) == types.FunctionType)
 print(type(abs) == types.BuiltinFunctionType)
 print(type(lambda x: x) == types.LambdaType)
@@ -53,6 +54,8 @@ print(hasattr(obj, 'y'))  # 有属性'y'吗？
 print(getattr(obj, 'y'))  # 获取属性'y'
 print(obj.y)  # 获取属性'y'
 
+
+# 也可以获得对象的方法
 print(getattr(obj, 'z', 404))  # 获取属性'z'，如果不存在，返回默认值404
 fn = getattr(obj, 'power')  # 获取属性'power'并赋值到变量fn
 print(fn)

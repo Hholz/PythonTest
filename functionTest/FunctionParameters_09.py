@@ -96,6 +96,7 @@ def calc(numbers):
 
 print(calc([1, 2, 3]))
 print(calc([1, 2, 3, 5, 7]))
+print(calc((1, )))
 
 
 def calc2(*numbers):

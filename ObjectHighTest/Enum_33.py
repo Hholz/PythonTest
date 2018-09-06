@@ -33,3 +33,9 @@ print(day1 == Weekday(1))
 # Weekday(7)
 for name, member in Weekday.__members__.items():
     print(name, '=>', member)
+
+for week in Weekday:
+    print(week)
+    print(week.value)
+    print(week.name)
+

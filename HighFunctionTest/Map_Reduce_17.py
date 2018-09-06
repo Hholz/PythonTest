@@ -1,5 +1,6 @@
 """map/reduce"""
 from functools import reduce
+from collections import Iterable, Iterator
 
 
 # map()函数接收两个参数，一个是函数，一个是Iterable，
@@ -12,9 +13,12 @@ r = map(f, list(range(1, 10)))
 print(next(r))
 print(list(r))
 
-r2 = map(f, [a for a in range(1, 10)])
+r2 = map(f, [a for a in range(1, 10)])  # r2是Iterator，只能使用一次
+# print(list(r2))
 r3 = list(r2)[:]
-print(list(r3))
+print(isinstance(r2, Iterator))
+print(isinstance(r3, Iterator))
+print(list(r2))
 print(list(r3))
 
 # r2是Iterator，只能list一次
@@ -24,8 +28,8 @@ print(list(r3))
 
 
 print(list(map(str, (1, 2, 3))))
-print(list(map(str, {"name": "jack", "age": 23})))
-print(list(map(str, {"name": "jack", "age": 23}.values())))
+print(list(map(str, {"name": "jack", "age": 23})))  # key作用在str方法上
+print(list(map(str, {"name": "jack", "age": 23}.values())))  # value作用在str方法上
 
 
 # reduce把一个函数作用在一个序列[x1, x2, x3, ...]上，这个函数必须接收两个参数

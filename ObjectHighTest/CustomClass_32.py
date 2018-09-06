@@ -14,7 +14,7 @@ __call__()
 '''
 
 
-# 在没找到属性的情况下调用__getattr__
+# 在没找到属性的情况下调用__getattr__   调用类的方法或属性
 
 class Chain(object):
 
@@ -34,3 +34,17 @@ class Chain(object):
 
 
 print(Chain('/status').users('michael').repos)
+
+
+# __call__
+class Student(object):
+    def __init__(self, name):
+        self.name = name
+
+    def __call__(self):
+        print('My name is %s.' % self.name)
+
+
+s = Student('Michael')
+print(s())  # self参数不要传入
+print(callable(s))  # 是否是个可调用的

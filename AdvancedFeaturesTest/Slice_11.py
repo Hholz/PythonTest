@@ -1,6 +1,6 @@
 """切片"""
 
-L= [1,2,3,4,5,6]
+L = [1, 2, 3, 4, 5, 6]
 print(L[0:6])
 print(L[:6])
 print(L[:3])
@@ -18,9 +18,9 @@ print(L[:100])
 print('=======================')
 print(L[:6:2])
 
-#tuple同理
+# tuple同理
 
-#字符串
+# 字符串
 print('ABCDEFG'[0:3])
 print('ABCDEFG'[1:3])
 

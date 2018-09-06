@@ -1,4 +1,4 @@
-"""多重继承"""
+"""多重继承, 可以看出调用哪个父类的方法"""
 import inspect
 
 
@@ -35,6 +35,12 @@ class A(B, C):
     pass
 
 
+"""
+A BED CDF
+A B E C D F
+"""
+if __name__ == '__main__':
+    print(inspect.getmro(A))
 '''
 C3 MRO算法
 http://www.codeweblog.com/python-mro-c3%E7%AE%97%E6%B3%95/
@@ -89,6 +95,11 @@ class A(B, C):
     def __init__(self):
         print("A")
 
+
+"""
+A BEG CDF
+A B E G C D F
+"""
 
 if __name__ == '__main__':
     print(inspect.getmro(A))

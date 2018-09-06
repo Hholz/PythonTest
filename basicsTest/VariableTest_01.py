@@ -9,9 +9,9 @@ print('123'
       '234'
       '32')
 print('1' '2' '3')
-print('1' ,2 ,'3')
-#print('1' 2 '3')
-print(1,2,3)
+print('1', 2, '3')
+# print('1' 2 '3')
+print(1, 2, 3)
 print('''你好，
 python''')
 print('''你好，
@@ -36,9 +36,9 @@ if age >= 18:
 else:
     print('you are a bady')
 
-a = 123 #a是一个整数
+a = 123  # a是一个整数
 print(a)
-a = 'ABC' #a为字符串
+a = 'ABC'  # a为字符串
 print(a)
 
 PI = 3.14159265359
@@ -50,4 +50,3 @@ print(10 % 3)
 print(3 * 3)
 print(3 * 3.0)
 print(9 / 3.0)
-

@@ -1,4 +1,4 @@
-"""使用__slots__"""
+"""给实例绑定一个方法，给类绑定一个方法,   使用__slots__"""
 from types import MethodType
 
 
@@ -46,12 +46,15 @@ class Student2(object):
 s = Student2()  # 创建新的实例
 s.name = 'Michael'  # 绑定属性'name'
 s.age = 25  # 绑定属性'age'
+
+
 # s.score = 99  # 绑定属性'score'
 
 
 # 由于'score'没有被放到__slots__中，所以不能绑定score属性，试图绑定score将得到AttributeError的错误。
 # 使用__slots__要注意，__slots__定义的属性仅对当前类实例起作用，对继承的子类是不起作用的
 # 当子类中没有__slots__时，不受限制
+# 除非在子类中也定义__slots__，这样，子类实例允许定义的属性就是自身的__slots__加上父类的__slots__
 class Student3(Student2):
     __slots__ = ('score',)
 
@@ -62,3 +65,21 @@ s3.age = 30
 # s3.city = 'sz'  # 不在父类和子类的__slots__中
 print(s3.score)
 print(s3.age)
+
+
+class Student4(Student2):
+    pass
+
+
+class Student5(Student4):
+    __slots__ = ('city',)
+
+
+s5 = Student5()
+s5.score = 1
+s5.city = 'city'
+print(s5.score)
+print(s5.city)
+print(isinstance(s5, Student2))
+print(isinstance(s5, Student4))
+print(issubclass(Student4, Student2))

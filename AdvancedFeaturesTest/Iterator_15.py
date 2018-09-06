@@ -17,6 +17,7 @@ print(isinstance([], Iterator))
 print(isinstance({}, Iterator))
 print(isinstance('abc', Iterator))
 print(isinstance((x for x in range(10)), Iterator))
+print(isinstance([x for x in range(10)], Iterator))
 print(isinstance(100, Iterator))
 
 print('=====================')

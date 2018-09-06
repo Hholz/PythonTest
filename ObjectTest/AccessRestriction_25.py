@@ -21,3 +21,12 @@ class Student(object):
 # __xxx__    双下划线开头，并且以双下划线结尾的    特殊变量   特殊变量是可以直接访问的
 # __xxx       private  私有变量，     在外部可以_Student__name访问
 # _xxx        实例变量外部是可以访问     但不建议外部访问
+
+stu = Student('名字', '分数')
+print(stu.get_name())
+print(stu._Student__name)
+
+stu.__name = '名字2'  # 表面上看，外部代码“成功”地设置了__name变量，但实际上这个__name变量和class内部的__name变量不是一个变量！
+print(stu.__name)
+print(stu.get_name())
+

@@ -1,6 +1,6 @@
 """循环"""
 
-#for
+# for
 names = ['Michael', 'Bob', 'Tracy']
 for name in names:
     print(name)
@@ -19,13 +19,12 @@ for x in range(101):
     sum = sum + x
 print(sum)
 
-
-#while
+# while
 sum = 0
 n = 99
 while n > 0:
     sum = sum + n
-    n = n-2
+    n = n - 2
 print(sum)
 
 L = ['Bart', 'Lisa', 'Adam']
@@ -51,6 +50,6 @@ print('END')
 n = 0
 while n < 10:
     n = n + 1
-    if n % 2 == 0: # 如果n是偶数，执行continue语句
-        continue # continue语句会直接继续下一轮循环，后续的print()语句不会执行
+    if n % 2 == 0:  # 如果n是偶数，执行continue语句
+        continue  # continue语句会直接继续下一轮循环，后续的print()语句不会执行
     print(n)

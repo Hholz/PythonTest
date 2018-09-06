@@ -25,6 +25,7 @@ def lazy_sum(*args):
 f = lazy_sum(1, 2, 3, 4, 5)
 print(f)
 print(f())
+print(f())
 
 # 内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，
 # 相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力
